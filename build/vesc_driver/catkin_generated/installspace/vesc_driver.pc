@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/install
+
+Name: vesc_driver
+Description: Description of vesc_driver
+Version: 0.1.0
+Cflags: -I/home/ubuntu/catkin_ws/install/include
+Libs: -L/home/ubuntu/catkin_ws/install/lib -lvesc_ros
+Requires: diagnostic_updater dynamic_reconfigure hardware_interface roscpp std_srvs

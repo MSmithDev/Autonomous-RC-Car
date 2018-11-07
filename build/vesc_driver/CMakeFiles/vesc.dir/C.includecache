@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/catkin_ws/src/vesc_driver/include/vesc/vesc.h
+stdint.h
+-
+
+/home/ubuntu/catkin_ws/src/vesc_driver/src/vesc.c
+vesc/vesc.h
+/home/ubuntu/catkin_ws/src/vesc_driver/src/vesc/vesc.h
+errno.h
+-
+fcntl.h
+-
+stdlib.h
+-
+string.h
+-
+termios.h
+-
+unistd.h
+-
+

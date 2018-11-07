@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC  -Wall   -shared -Wl,-soname,libvesc.so -o /home/ubuntu/catkin_ws/devel/lib/libvesc.so CMakeFiles/vesc.dir/src/vesc.c.o 

@@ -1,0 +1,57 @@
+\subsubsection usage Usage
+\verbatim
+<node name="vesc_driver" pkg="vesc_driver" type="vesc_driver">
+  <param name="pwm_mode" type="int" value="0" />
+  <param name="comm_mode" type="int" value="0" />
+  <param name="motor_type" type="int" value="0" />
+  <param name="sensor_mode" type="int" value="0" />
+  <param name="l_current_max" type="double" value="60.0" />
+  <param name="l_current_min" type="double" value="-60.0" />
+  <param name="l_in_current_max" type="double" value="60.0" />
+  <param name="l_in_current_min" type="double" value="-20.0" />
+  <param name="l_abs_current_max" type="double" value="130.0" />
+  <param name="l_min_erpm" type="double" value="-100000.0" />
+  <param name="l_max_erpm" type="double" value="100000.0" />
+  <param name="l_max_erpm_fbrake" type="double" value="300.0" />
+  <param name="l_max_erpm_fbrake_cc" type="double" value="1500.0" />
+  <param name="l_min_vin" type="double" value="8.0" />
+  <param name="l_max_vin" type="double" value="8.0" />
+  <param name="l_slow_abs_current" type="bool" value="True" />
+  <param name="l_rpm_lim_neg_torque" type="bool" value="True" />
+  <param name="l_temp_fet_start" type="double" value="80.0" />
+  <param name="l_temp_fet_end" type="double" value="100.0" />
+  <param name="l_temp_motor_start" type="double" value="80.0" />
+  <param name="l_temp_motor_end" type="double" value="100.0" />
+  <param name="l_min_duty" type="double" value="0.005" />
+  <param name="l_max_duty" type="double" value="0.95" />
+  <param name="sl_min_erpm" type="double" value="150.0" />
+  <param name="sl_min_erpm_cycle_int_limit" type="double" value="1100.0" />
+  <param name="sl_max_fullbreak_current_dir_change" type="double" value="10.0" />
+  <param name="sl_cycle_int_limit" type="double" value="62.0" />
+  <param name="sl_phase_advance_at_br" type="double" value="0.8" />
+  <param name="sl_cycle_int_rpm_br" type="double" value="80000.0" />
+  <param name="sl_bemf_coupling_k" type="double" value="600.0" />
+  <param name="hall_table_0" type="int" value="-1" />
+  <param name="hall_table_1" type="int" value="1" />
+  <param name="hall_table_2" type="int" value="3" />
+  <param name="hall_table_3" type="int" value="2" />
+  <param name="hall_table_4" type="int" value="5" />
+  <param name="hall_table_5" type="int" value="6" />
+  <param name="hall_table_6" type="int" value="4" />
+  <param name="hall_table_7" type="int" value="-1" />
+  <param name="hall_sl_erpm" type="double" value="2000.0" />
+  <param name="s_pid_kp" type="double" value="0.0001" />
+  <param name="s_pid_ki" type="double" value="0.002" />
+  <param name="s_pid_kd" type="double" value="0.0" />
+  <param name="s_pid_min_rpm" type="double" value="900.0" />
+  <param name="p_pid_kp" type="double" value="0.0001" />
+  <param name="p_pid_ki" type="double" value="0.002" />
+  <param name="p_pid_kd" type="double" value="0.0" />
+  <param name="cc_startup_boost_duty" type="double" value="0.01" />
+  <param name="cc_min_current" type="double" value="1.0" />
+  <param name="cc_gain" type="double" value="0.0046" />
+  <param name="cc_ramp_step_max" type="double" value="0.04" />
+  <param name="m_fault_stop_time_ms" type="int" value="3000" />
+</node>
+\endverbatim
+

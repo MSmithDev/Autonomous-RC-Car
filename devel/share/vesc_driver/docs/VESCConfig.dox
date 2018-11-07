@@ -1,0 +1,56 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~pwm_mode" : \b [int] PWM Mode min: 0, default: 0, max: 2
+- \b "~comm_mode" : \b [int] Commutation Mode min: 0, default: 0, max: 1
+- \b "~motor_type" : \b [int] Motor Type min: 0, default: 0, max: 1
+- \b "~sensor_mode" : \b [int] Sensor Mode min: 0, default: 0, max: 2
+- \b "~l_current_max" : \b [double] Maximum motor current min: 0.0, default: 60.0, max: 200.0
+- \b "~l_current_min" : \b [double] Minimum motor current (regen) min: -200.0, default: -60.0, max: 0.0
+- \b "~l_in_current_max" : \b [double] Maximum battery current min: 0.0, default: 60.0, max: 200.0
+- \b "~l_in_current_min" : \b [double] Minimum battery current (regen) min: -200.0, default: -20.0, max: 0.0
+- \b "~l_abs_current_max" : \b [double] Absolute maximum current min: 0.0, default: 130.0, max: 200.0
+- \b "~l_min_erpm" : \b [double] Minimum ERPM min: -200000.0, default: -100000.0, max: 0.0
+- \b "~l_max_erpm" : \b [double] Maximum ERPM min: 0.0, default: 100000.0, max: 200000.0
+- \b "~l_max_erpm_fbrake" : \b [double] Maximum ERPM at full brake min: 0.0, default: 300.0, max: 100000.0
+- \b "~l_max_erpm_fbrake_cc" : \b [double] Maximum ERPM at full brake in current control mode min: 0.0, default: 1500.0, max: 100000.0
+- \b "~l_min_vin" : \b [double] Minimum input voltage min: 6.0, default: 8.0, max: 60.0
+- \b "~l_max_vin" : \b [double] Maximum input voltage min: 6.0, default: 8.0, max: 60.0
+- \b "~l_slow_abs_current" : \b [bool] Slow absolute maximum current min: False, default: True, max: True
+- \b "~l_rpm_lim_neg_torque" : \b [bool] Limit ERPM with negative torque min: False, default: True, max: True
+- \b "~l_temp_fet_start" : \b [double] MOSFET Temperature Limit Start min: -100.0, default: 80.0, max: 300.0
+- \b "~l_temp_fet_end" : \b [double] MOSFET Temperature Limit End min: -100.0, default: 100.0, max: 300.0
+- \b "~l_temp_motor_start" : \b [double] Motor Temperature Limit Start min: -100.0, default: 80.0, max: 300.0
+- \b "~l_temp_motor_end" : \b [double] Motor Temperature Limit End min: -100.0, default: 100.0, max: 300.0
+- \b "~l_min_duty" : \b [double] Minimum duty cycle min: 0.005, default: 0.005, max: 0.5
+- \b "~l_max_duty" : \b [double] Maximum duty cycle min: 0.01, default: 0.95, max: 0.95
+- \b "~sl_min_erpm" : \b [double] Sensorless minimum ERPM min: 0.0, default: 150.0, max: 100000.0
+- \b "~sl_min_erpm_cycle_int_limit" : \b [double] Sensorless minimum ERPM for integrator limit min: 0.0, default: 1100.0, max: 10000.0
+- \b "~sl_max_fullbreak_current_dir_change" : \b [double] Sensorless maximum full brake current during direction change min: 0.0, default: 10.0, max: 300.0
+- \b "~sl_cycle_int_limit" : \b [double] Sensorless integrator limit min: 0.0, default: 62.0, max: 10000.0
+- \b "~sl_phase_advance_at_br" : \b [double] Sensorless phase advance at BR ERPM min: 0.0, default: 0.8, max: 1.0
+- \b "~sl_cycle_int_rpm_br" : \b [double] Sensorless BR ERPM min: 0.0, default: 80000.0, max: 200000.0
+- \b "~sl_bemf_coupling_k" : \b [double] Sensorless BEMF Coupling min: 0.0, default: 600.0, max: 5000.0
+- \b "~hall_table_0" : \b [int] Hall sensor table value 0 min: -1, default: -1, max: 6
+- \b "~hall_table_1" : \b [int] Hall sensor table value 1 min: -1, default: 1, max: 6
+- \b "~hall_table_2" : \b [int] Hall sensor table value 2 min: -1, default: 3, max: 6
+- \b "~hall_table_3" : \b [int] Hall sensor table value 3 min: -1, default: 2, max: 6
+- \b "~hall_table_4" : \b [int] Hall sensor table value 4 min: -1, default: 5, max: 6
+- \b "~hall_table_5" : \b [int] Hall sensor table value 5 min: -1, default: 6, max: 6
+- \b "~hall_table_6" : \b [int] Hall sensor table value 6 min: -1, default: 4, max: 6
+- \b "~hall_table_7" : \b [int] Hall sensor table value 7 min: -1, default: -1, max: 6
+- \b "~hall_sl_erpm" : \b [double] Sensorless ERPM (hybrid mode) min: 0.0, default: 2000.0, max: 200000.0
+- \b "~s_pid_kp" : \b [double] Speed control KP min: 0.0, default: 0.0001, max: 99.99
+- \b "~s_pid_ki" : \b [double] Speed control KI min: 0.0, default: 0.002, max: 99.99
+- \b "~s_pid_kd" : \b [double] Speed control KD min: 0.0, default: 0.0, max: 99.99
+- \b "~s_pid_min_rpm" : \b [double] Speed control minimum ERPM min: 0.0, default: 900.0, max: 200000.0
+- \b "~p_pid_kp" : \b [double] Position control KP min: 0.0, default: 0.0001, max: 99.99
+- \b "~p_pid_ki" : \b [double] Position control KI min: 0.0, default: 0.002, max: 99.99
+- \b "~p_pid_kd" : \b [double] Position control KD min: 0.0, default: 0.0, max: 99.99
+- \b "~cc_startup_boost_duty" : \b [double] Current control startup boost min: 0.0, default: 0.01, max: 1.0
+- \b "~cc_min_current" : \b [double] Current control minimum current min: 0.0, default: 1.0, max: 99.99
+- \b "~cc_gain" : \b [double] Current control gain min: 0.0, default: 0.0046, max: 50.0
+- \b "~cc_ramp_step_max" : \b [double] Current control maximum ramp step (at 1000 Hz) min: 0.0, default: 0.04, max: 50.0
+- \b "~m_fault_stop_time_ms" : \b [int] Fault stop timeout (in milliseconds) min: -1, default: 3000, max: 40000000
+
